@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Indigo Digital</title>
+    <meta name="description" content="3D rendering and digital art portfolio showcasing work in Blender, Houdini, and other professional tools">
+</head>
+<body>
+    <div id="loading" class="loading-screen">
+        <div class="loading-spinner"></div>
+    </div>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images/Logo_Transparent.png" alt="Indigo Digital" class="logo">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                <li><a href="resume.html" class="nav-link">Résumé</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main portfolio-main">
+        <section class="portfolio-header">
+            <h1 class="portfolio-title">Portfolio</h1>
+            <p class="portfolio-subtitle">3D Rendering & Digital Art</p>
+        </section>
+
+        <section class="gallery">
+            <div class="gallery-container">
+                <button class="gallery-nav gallery-prev" aria-label="Previous image">❮</button>
+
+                <div class="gallery-viewport">
+                    <div class="gallery-track">
+                        <!-- Video 1: Z-Pass -->
+                        <div class="gallery-item active" data-index="0">
+                            <video class="gallery-media gallery-video" muted loop playsinline preload="auto">
+                                <source src="assets/images/ZPass.mp4" type="video/mp4">
+                            </video>
+                            <div class="gallery-info">
+                                <h3 class="gallery-title">Z-Pass Visualization</h3>
+                                <p class="gallery-description">Depth and rendering technique demonstration</p>
+                                <span class="media-type">Technical Demo</span>
+                            </div>
+                        </div>
+
+                        <!-- Image 1: Car Render -->
+                        <div class="gallery-item" data-index="1">
+                            <img src="assets/images/car.png" alt="Car render created in Blender using Rigid Body Cars and Citygen" class="gallery-media">
+                            <div class="gallery-info">
+                                <h3 class="gallery-title">Car Render</h3>
+                                <p class="gallery-description">Created in Blender using Rigid Body Cars and Citygen</p>
+                                <span class="media-type">Static Render</span>
+                            </div>
+                        </div>
+
+                        <!-- Video 2: Car Burn -->
+                        <div class="gallery-item" data-index="2">
+                            <video class="gallery-media gallery-video" muted loop playsinline preload="none" data-lazy-src="assets/images/Car_Burn.mp4">
+                                <source data-src="assets/images/Car_Burn.mp4" type="video/mp4">
+                            </video>
+                            <div class="gallery-info">
+                                <h3 class="gallery-title">Car Burn Simulation</h3>
+                                <p class="gallery-description">Dynamic destruction and fire simulation</p>
+                                <span class="media-type">Animation</span>
+                            </div>
+                        </div>
+
+                        <!-- Image 2: Fire Scene -->
+                        <div class="gallery-item" data-index="3">
+                            <img src="assets/images/fire.png" alt="Fire scene created in Blender and Embergen" class="gallery-media">
+                            <div class="gallery-info">
+                                <h3 class="gallery-title">Fire Scene</h3>
+                                <p class="gallery-description">Blender and Embergen</p>
+                                <span class="media-type">Static Render</span>
+                            </div>
+                        </div>
+
+                        <!-- Video 3: Test Video -->
+                        <div class="gallery-item" data-index="4">
+                            <video class="gallery-media gallery-video" muted loop playsinline preload="none" data-lazy-src="assets/images/test-vid1.mp4">
+                                <source data-src="assets/images/test-vid1.mp4" type="video/mp4">
+                            </video>
+                            <div class="gallery-info">
+                                <h3 class="gallery-title">Motion Study</h3>
+                                <p class="gallery-description">Experimental movement and dynamics</p>
+                                <span class="media-type">Animation</span>
+                            </div>
+                        </div>
+
+                        <!-- Image 3: Character Design -->
+                        <div class="gallery-item" data-index="5">
+                            <img src="assets/images/Kirke.png" alt="Character design created in Blender and Marvelous Designer" class="gallery-media">
+                            <div class="gallery-info">
+                                <h3 class="gallery-title">Character Design - Kirke</h3>
+                                <p class="gallery-description">Blender and Marvelous Designer</p>
+                                <span class="media-type">Static Render</span>
+                            </div>
+                        </div>
+
+                        <!-- Video 4: Alida's Study -->
+                        <div class="gallery-item" data-index="6">
+                            <video class="gallery-media gallery-video" muted loop playsinline preload="none" data-lazy-src="assets/images/Alida's Study.mp4">
+                                <source data-src="assets/images/Alida's Study.mp4" type="video/mp4">
+                            </video>
+                            <div class="gallery-info">
+                                <h3 class="gallery-title">Alida's Study</h3>
+                                <p class="gallery-description">Environmental storytelling and atmosphere</p>
+                                <span class="media-type">Animation</span>
+                            </div>
+                        </div>
+
+                        <!-- Image 4: Sand Landscape -->
+                        <div class="gallery-item" data-index="7">
+                            <img src="assets/images/sand.png" alt="Sand landscape created in Houdini" class="gallery-media">
+                            <div class="gallery-info">
+                                <h3 class="gallery-title">Sand Landscape</h3>
+                                <p class="gallery-description">Created in Houdini</p>
+                                <span class="media-type">Static Render</span>
+                            </div>
+                        </div>
+
+                        <!-- Video 5: Cube Sorter -->
+                        <div class="gallery-item" data-index="8">
+                            <video class="gallery-media gallery-video" muted loop playsinline preload="none" data-lazy-src="assets/images/Cube Sorter.mp4">
+                                <source data-src="assets/images/Cube Sorter.mp4" type="video/mp4">
+                            </video>
+                            <div class="gallery-info">
+                                <h3 class="gallery-title">Cube Sorter</h3>
+                                <p class="gallery-description">Mechanical animation and precision movement</p>
+                                <span class="media-type">Animation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="gallery-nav gallery-next" aria-label="Next image">❯</button>
+            </div>
+
+            <div class="gallery-dots">
+                <button class="gallery-dot active" data-index="0" aria-label="Z-Pass Demo"></button>
+                <button class="gallery-dot" data-index="1" aria-label="Car Render"></button>
+                <button class="gallery-dot" data-index="2" aria-label="Car Burn Animation"></button>
+                <button class="gallery-dot" data-index="3" aria-label="Fire Scene"></button>
+                <button class="gallery-dot" data-index="4" aria-label="Motion Study"></button>
+                <button class="gallery-dot" data-index="5" aria-label="Character Design"></button>
+                <button class="gallery-dot" data-index="6" aria-label="Alida's Study"></button>
+                <button class="gallery-dot" data-index="7" aria-label="Sand Landscape"></button>
+                <button class="gallery-dot" data-index="8" aria-label="Cube Sorter"></button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

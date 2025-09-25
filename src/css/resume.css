@@ -1,0 +1,284 @@
+.resume-main {
+  background-color: var(--color-background);
+}
+
+.resume-header {
+  text-align: center;
+  padding: var(--spacing-4xl) var(--spacing-lg) var(--spacing-2xl);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.resume-title {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-4xl);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-primary);
+}
+
+.resume-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  font-weight: 300;
+  margin-bottom: var(--spacing-md);
+}
+
+.resume-contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-lg);
+}
+
+.contact-item {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-base);
+}
+
+.resume-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg) var(--spacing-4xl);
+}
+
+.resume-columns {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-4xl);
+}
+
+.resume-left, .resume-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.resume-section {
+  margin-bottom: var(--spacing-4xl);
+}
+
+.resume-section:last-child {
+  margin-bottom: 0;
+}
+
+.resume-section-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+  padding-bottom: var(--spacing-sm);
+}
+
+.resume-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--color-accent);
+  border-radius: 1px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.skill-category {
+  background-color: var(--color-surface);
+  padding: var(--spacing-xl);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.skill-category:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.skill-category h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.skill-category ul {
+  list-style: none;
+}
+
+.skill-category li {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+  padding-left: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+}
+
+.skill-category li::before {
+  content: '•';
+  color: var(--color-accent);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.skill-category li:last-child {
+  margin-bottom: 0;
+}
+
+.resume-section p {
+  font-size: var(--font-size-lg);
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  font-weight: 300;
+}
+
+/* Job Entries */
+.job {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.job-company {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.job-title {
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-bottom: var(--spacing-xs);
+}
+
+.job-dates {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-sm);
+}
+
+.job-description {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Projects */
+.project {
+  margin-bottom: var(--spacing-xl);
+}
+
+.project-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.project-description {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Education */
+.education {
+  margin-bottom: var(--spacing-xl);
+}
+
+.education-school {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.education-degree {
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  font-style: italic;
+  margin-bottom: var(--spacing-xs);
+}
+
+.education-status, .education-date {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+}
+
+/* Right Column Text Sections */
+.skills-text, .software-text, .languages-text {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* Awards */
+.award {
+  margin-bottom: var(--spacing-md);
+}
+
+.award-name {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .resume-header {
+    padding: var(--spacing-2xl) var(--spacing-md) var(--spacing-xl);
+  }
+
+  .resume-title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .resume-content {
+    padding: 0 var(--spacing-md) var(--spacing-2xl);
+  }
+
+  .resume-columns {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .resume-contact-info {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: center;
+  }
+
+  .job-company, .project-title, .education-school {
+    font-size: var(--font-size-base);
+  }
+
+  .resume-section {
+    margin-bottom: var(--spacing-2xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-section-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .skill-category {
+    padding: var(--spacing-md);
+  }
+
+  .skill-category h3 {
+    font-size: var(--font-size-base);
+  }
+
+  .resume-section p {
+    font-size: var(--font-size-base);
+  }
+}
