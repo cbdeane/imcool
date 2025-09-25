@@ -155,14 +155,42 @@ class PortfolioApp {
 
   startAutoPlay() {
     this.stopAutoPlay();
-    this.autoPlayTimer = setInterval(() => {
-      this.nextImage();
-    }, 5000);
+
+    const currentItem = document.querySelector(`.gallery-item[data-index="${this.currentIndex}"]`);
+    const video = currentItem?.querySelector('.gallery-video');
+
+    if (video && video.duration) {
+      // For videos, wait for video duration + 1 second buffer
+      const videoDuration = (video.duration * 1000) + 1000;
+      this.autoPlayTimer = setTimeout(() => {
+        this.nextImage();
+      }, videoDuration);
+    } else if (video && !video.duration) {
+      // If video duration isn't available yet, use loadedmetadata event
+      const handleMetadata = () => {
+        this.stopAutoPlay();
+        const videoDuration = (video.duration * 1000) + 1000;
+        this.autoPlayTimer = setTimeout(() => {
+          this.nextImage();
+        }, videoDuration);
+        video.removeEventListener('loadedmetadata', handleMetadata);
+      };
+      video.addEventListener('loadedmetadata', handleMetadata);
+      // Fallback to 5 seconds if metadata doesn't load
+      this.autoPlayTimer = setTimeout(() => {
+        this.nextImage();
+      }, 5000);
+    } else {
+      // For images, use the standard 5-second timer
+      this.autoPlayTimer = setTimeout(() => {
+        this.nextImage();
+      }, 5000);
+    }
   }
 
   stopAutoPlay() {
     if (this.autoPlayTimer) {
-      clearInterval(this.autoPlayTimer);
+      clearTimeout(this.autoPlayTimer);
       this.autoPlayTimer = null;
     }
   }
